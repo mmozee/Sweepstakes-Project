@@ -14,6 +14,7 @@ namespace Sweepstakes
         { get {return name;}
             set { name = value;}
         }
+        
 
         public Sweepstakes(string name)
         {
@@ -27,7 +28,7 @@ namespace Sweepstakes
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            UserInterface.DisplayContestantInformation(contestant);
         }
         public string WinnerPicker()
         {
@@ -36,19 +37,11 @@ namespace Sweepstakes
             int myRandom = RNG.Next(0, contestants.Count);
             Contestant winnerContestant;
             winnerContestant = contestants[myRandom];
-            string winner = $"Winner is {winnerContestant.Firstname} {winnerContestant.LastName} {winnerContestant.RegistrationNumber}"; 
+            string winner = $"Winner is {winnerContestant.FirstName} {winnerContestant.LastName} {winnerContestant.RegistrationNumber}"; 
             return winner;
 
         }
-        public string WinnerPicker()
-        {
-            Random RNG = new Random();
-
-            int myRandom = RNG.Next(0, contestants.Count);
-            Contestant winnerContestant;
-            winnerContestant = contestants[myRandom];
-            string winner = $"Winner is {winnerContestant.Firstname} {winnerContestant.LastName} {winnerContestant.RegistrationNumber}";
-            return winner;
+       
 
 
 
@@ -56,6 +49,5 @@ namespace Sweepstakes
 
 
 
-
-        }
+    }
 }

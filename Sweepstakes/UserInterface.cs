@@ -33,7 +33,15 @@ namespace Sweepstakes
             return registrationNumber;
         }
 
-
+        public static void DisplayContestantInformation(Contestant contestant)
+        {
+            Console.WriteLine("Contestant Information");
+            Console.WriteLine("**********************");
+            Console.WriteLine($"First Name: {contestant.FirstName}");
+            Console.WriteLine($"First Name: {contestant.LastName}");
+            Console.WriteLine($"First Name: {contestant.EmailAddress}");
+            Console.WriteLine($"First Name: {contestant.RegistrationNumber}");
+        }
 
     }
 }

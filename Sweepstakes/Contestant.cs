@@ -7,17 +7,39 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant
+    public class Contestant
     {
         // member variables (has a)
-        public string Firstname;
-        public string LastName;
-        public string EmailAddress;
-        public int RegistrationNumber;
+        private string firstName;
+        public string FirstName
+        {
+            get { return firstName; }
+            set { firstName = value;}
+        }
+        private string lastName;
+        public string LastName
+        {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+        private string emailAddress;
+        public string EmailAddress
+        {
+            get { return emailAddress; }
+            set { emailAddress = value; }
+        }
+
+        private int registrationNumber;
+        public int RegistrationNumber
+        {
+            get { return registrationNumber; }
+            set { registrationNumber = value; }
+        }
+
         //constructor (spawner)
         public Contestant()
         {
-            Firstname = UserInterface.FirstNameRequest();
+            FirstName = UserInterface.FirstNameRequest();
             LastName = UserInterface.LastNameRequest();
             EmailAddress = UserInterface.EmailRequest();
 
