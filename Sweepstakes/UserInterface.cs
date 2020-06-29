@@ -43,5 +43,27 @@ namespace Sweepstakes
             Console.WriteLine($"First Name: {contestant.RegistrationNumber}");
         }
 
+        public static string NameTheSweepstakes()
+        {
+            Console.WriteLine("Please enter the name you have chosen for the Sweepstakes, I recommend Kitties but you can pick what you want." );
+            string userInput = Console.ReadLine();
+            return userInput;
+        }
+
+        public static ISweepstakesManager ChooseSweepstakesManager() 
+        {
+            Console.WriteLine("Who is going to be the Sweepstakes Manager, I recommend Garfield but he doesn't work here.");
+            string userInput = Console.ReadLine();
+            if(userInput == "1")
+            {
+                return ISweepstakesManager
+            }
+
+            return 
+        
+        
+        }
+
+
     }
 }
