@@ -52,17 +52,24 @@ namespace Sweepstakes
 
         public static ISweepstakesManager ChooseSweepstakesManager() 
         {
-            Console.WriteLine("Who is going to be the Sweepstakes Manager, I recommend Garfield but he doesn't work here.");
+            Console.WriteLine("Who is going to be the Sweepstakes Manager,\n I recommend Garfield but he doesn't work here. \n Otherwise pick 1 or 2");
             string userInput = Console.ReadLine();
-            if(userInput == "1")
-            {
-                return ISweepstakesManager
-            }
 
-            return 
-        
-        
+            switch (userInput)
+            {
+                case "1":
+                    return new SweepstakesQueueManager();
+                case "2":
+                    return new SweepstakesStackManager();
+                
+                default:
+                    return null;
+              
+            }
+                      
+     
         }
+        
 
 
     }

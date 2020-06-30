@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Simulation
+    class Simulation 
     {
         public void RunSweepstakes()
         {
@@ -15,8 +15,8 @@ namespace Sweepstakes
 
         public void CreateMarketingFirm()
         {
-            
-            MarketingFirm marketing = new MarketingFirm();
+             
+            MarketingFirm marketing = new MarketingFirm(UserInterface.ChooseSweepstakesManager());
         }
     }
 }
