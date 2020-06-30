@@ -23,8 +23,8 @@ namespace Sweepstakes
         }      
         public void RegisterContestant(Contestant contestant)
         {
-            int registrationNumb = contestant.RegistrationNumber + 1;
-            contestants.Add(registrationNumb, contestant);
+            contestant.RegistrationNumber = contestants.Count + 1;
+            contestants.Add(contestant.RegistrationNumber, contestant);
         }
         public void PrintContestantInfo(Contestant contestant)
         {
@@ -34,7 +34,7 @@ namespace Sweepstakes
         {
             Random RNG = new Random();
 
-            int myRandom = RNG.Next(0, contestants.Count);
+            int myRandom = RNG.Next(1, contestants.Count+1);
             Contestant winnerContestant;
             winnerContestant = contestants[myRandom];
             string winner = $"Winner is {winnerContestant.FirstName} {winnerContestant.LastName} {winnerContestant.RegistrationNumber}"; 

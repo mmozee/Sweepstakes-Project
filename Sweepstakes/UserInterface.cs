@@ -11,8 +11,8 @@ namespace Sweepstakes
         public static string FirstNameRequest()
         {
             Console.WriteLine("Please provide your First Name");
-            string userFirstName = Console.ReadLine();
-            return userFirstName;
+            string firstName = Console.ReadLine();
+            return firstName;
         }
         public static string LastNameRequest()
         {
@@ -37,10 +37,10 @@ namespace Sweepstakes
         {
             Console.WriteLine("Contestant Information");
             Console.WriteLine("**********************");
-            Console.WriteLine($"First Name: {contestant.FirstName}");
+            Console.WriteLine($"Contestant Information: {UserInterface.FirstNameRequest()}");
             Console.WriteLine($"First Name: {contestant.LastName}");
             Console.WriteLine($"First Name: {contestant.EmailAddress}");
-            Console.WriteLine($"First Name: {contestant.RegistrationNumber}");
+            Console.WriteLine($"Registration Number: {contestant.RegistrationNumber}");
         }
 
         public static string NameTheSweepstakes()

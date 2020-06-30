@@ -22,10 +22,10 @@ namespace Sweepstakes
 
         public Sweepstakes GetSweepstakes()
         {
-            Sweepstakes sweepstakes;
-            sweepstakes = stack.Pop();
+        //    Sweepstakes sweepstakes;
+        //    sweepstakes = stack.Pop();
 
-            return sweepstakes;
+            return stack.Pop();
         }
     }
 }

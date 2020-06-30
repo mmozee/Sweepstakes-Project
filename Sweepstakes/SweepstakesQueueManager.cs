@@ -17,9 +17,9 @@ namespace Sweepstakes
 
         public Sweepstakes GetSweepstakes()
         {
-            Sweepstakes sweepstakes;
-            sweepstakes = queue.Dequeue();
-            return sweepstakes;
+            //Sweepstakes sweepstakes;
+            //sweepstakes = queue.Dequeue();
+            return queue.Dequeue();
         }
         
         public void InsertSweepstakes(Sweepstakes sweepstakes)
